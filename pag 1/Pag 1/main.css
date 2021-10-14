@@ -1,0 +1,279 @@
+@font-face {
+  font-family: LEMONMILK-Bold;
+  src: url(Fuente.otf);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+.imagen-logo {
+  display: block;
+  position: inherit;
+  margin: 0 auto;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+body {
+
+  background-image: url('fondo.png');
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: 'LEMONMILK-Bold', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+#li {
+  color: rgb(21, 40, 27);
+}
+
+.enlaces-menu li:hover {
+  cursor: pointer;
+}
+
+.red {
+  background-color: rgb(242, 9, 9);
+  margin: 100px 200px 20px;
+  border: 6px ridge red;
+}
+
+.blue {
+  background-color: rgb(0, 42, 250);
+}
+
+.green {
+  background-color: rgb(0, 255, 89);
+}
+
+.yellow {
+  background-color: rgb(205, 240, 5);
+}
+
+.indigo {
+  color: rgb(75, 0, 130);
+  margin: 10px 200px 20px;
+  border: 6px dashed rgb(23, 231, 34)
+}
+
+.titulo {
+
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: cursive;
+  font-size: 48px;
+  border: 6px ridge rgb(0, 0, 255);
+
+
+
+}
+
+.subtitulo {
+  text-align: center;
+
+  color: rgb(255, 255, 255);
+  font-family: "Georgia", "Palatino", serif, ;
+  font-size: 15px;
+  margin: 10px 200px 20px;
+  border: 6px ridge blue;
+}
+
+.texto {
+
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+
+  font-size: 14px;
+  margin: 10px 200px 20px;
+  border: 6px ridge red;
+
+
+
+
+
+
+}
+
+.imagen-logo {
+  position: sticky;
+  top: 60px;
+  left: 600px
+}
+
+#disc {
+  position: absolute;
+  top: 800px;
+  left: 500px;
+
+  width: 5%
+}
+
+#steam {
+  position: absolute;
+  top: 800px;
+  right: 500px;
+
+  width: 10%
+}
+
+#gif {
+  position: absolute;
+  top: 800px;
+  left: 750px;
+
+  width: 20%
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  background-color: rgb(10, 80, 194);
+}
+
+.ham {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ham span {
+  background-color: #f3f3f3;
+  display: block;
+  height: 3px;
+  width: 28px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.enlaces-menu {
+  display: flex;
+  padding: 0;
+}
+
+.enlaces-menu li {
+  padding: 0 40px;
+  list-style-type: none;
+  transition: 0.3s;
+}
+
+.enlaces-menu li a {
+
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fdfbfb;
+  font-weight: 800;
+}
+
+.enlaces-menu li:hover {
+  background-color: rgb(62, 130, 197);
+}
+
+
+/* DISPOSITIVOS MOVILES */
+
+@media (max-width:768px) {
+  body {
+    overflow: hidden;
+  }
+
+  .ham {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    transition: 0.2s 0.1s;
+
+  }
+
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .logo {
+    padding-left: 25px;
+
+  }
+
+  .enlaces-menu {
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 92vh;
+    margin: 0;
+    padding: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 5s ease-out;
+    width: 100%;
+
+
+  }
+
+  .enlaces-menu li {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+}
+
+/* Animaciones */
+
+@keyframes muestraMenu {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.enlaces-menu.activado {
+  display: flex;
+  animation: muestraMenu 350ms ease-in-out both;
+}
+
+.br-1.animado {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animado {
+  opacity: 0;
+}
+
+.br-3.animado {
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.girar:hover {
+  transform: rotate(360deg);
+}
