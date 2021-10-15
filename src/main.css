@@ -1,6 +1,6 @@
 @font-face {
   font-family: LEMONMILK-Bold;
-  src: url(Fuente.otf);
+  src: url(LEMONMILK-Bold.otf);
 }
 
 html {
@@ -21,6 +21,8 @@ html {
   margin: 0 auto;
   background-color: black;
   border-radius: 40px;
+  max-width:100%;
+  max-height:100%;
 }
 
 .logo {
