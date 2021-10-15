@@ -36,6 +36,12 @@ body {
   font-family: 'LEMONMILK-Bold', sans-serif;
 }
 
+main {
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+}
+
 .hidden {
   display: none;
 }
