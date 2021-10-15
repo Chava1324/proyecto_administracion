@@ -115,6 +115,10 @@ main {
   border: 6px ridge red;
 }
 
+ul.texto {
+  padding-left: 20px;
+}
+
 #disc {
   position: absolute;
   top: 800px;
