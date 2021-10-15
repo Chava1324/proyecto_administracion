@@ -1,14 +1,18 @@
-function switch_view(elems) {
-    elems.forEach(e => {
-        e.classList.toggle('hidden')
+function switch_view(elems, e_index) {
+    elems.forEach((elem, index) => {
+        if (e_index == index) {
+            elem.classList.remove('hidden');
+        } else {
+            elem.classList.add('hidden');
+        }
     });
 };
 
 var li_elems = document.querySelectorAll('li');
-li_elems.forEach(element => {
+li_elems.forEach((element, index) => {
     element.addEventListener('click', () => {
         var divs = document.querySelectorAll('body div');
-        switch_view(divs);
+        switch_view(divs, index);
     });
 });
 
