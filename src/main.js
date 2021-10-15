@@ -11,7 +11,7 @@ function switch_view(elems, e_index) {
 var nav_lis = document.querySelectorAll('nav ul li');
 nav_lis.forEach((element, index) => {
     element.addEventListener('click', () => {
-        var divs = document.querySelectorAll('body div');
+        var divs = document.querySelectorAll('body div.contenido');
         switch_view(divs, index);
     });
 });

@@ -27,6 +27,10 @@ html {
   background-color: black;
 }
 
+div input:hover, div label:hover{
+  cursor: pointer;
+}
+
 .logo {
   border-radius: 50%;
   width: 50px;
